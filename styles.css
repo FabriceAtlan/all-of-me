@@ -1,81 +1,145 @@
-  :root {
-    --primary-color: #E0C59F;
-    --secondary-color: #F1F2EB;
-    --font-color-primary: #0A1128;
-    --font-large: 3rem;
-    --font-medium: 2.5rem;
-    --font-small: 1.5rem;
-    --font-little: .9rem;
-    --font-icons: 1.3rem;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none;
-    padding-inline-start: 20px;
-  }
-  
-  body {
-    width: 100vw;
-    height: 100vh;
-    font-size: var(--font-small);
-    background-color: var(--secondary-color);
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin: 0 auto;
-    padding: 5%;
-    width: 90%;
-    color: var(--font-color-primary);
-    background-color: var(--primary-color);
-  }
+:root {
+  --primary-color: #141115;
+  --secondary-color: #363038;
+  --tertiary-color: #3f3c40;
+  --font-color-primary: #1C0221;
+  --color-light: #dddddd;
+  --color-medium: #1c254c;
+  --body-font: "Roboto", sas-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --font-size-normal: .95rem;
+  --font-size-small: .82rem;
+  --font-size-smaller: .75rem;
+}
 
-  h1 {
-    align-self: center;
-    font-size: var(--font-large);
-  }
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-  h2 {
-    font-size: var(--font-medium);
-  }
+body {
+  font-family: var(--body-font);
+  font-size: var(--font-small);
+}
 
-  a {
-  color: var(--font-color-primary);
-  transition: all .2s ease-in-out;
-  }
+body {
+  color: var(--color-light);
+  background-color: var(--primary-color);
+}
 
-  a:hover {
-    color: var(--secondary-color);
-  }
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  gap: 3rem;
+}
 
-  .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    font-size: var(--font-little);
-  }
+footer {
+  height: 120px;
+}
 
-  .info ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-  }
+button {
+  border: none;
+  outline: none;
+}
 
-  ul i {
-    padding: 0 20px 20px;
-    font-size: var(--font-icons);
-  }
+h1, h2, h3 {
+  color: var(--color-light);
+}
 
-  img {
-    width: 50%;
-    height: auto;
-  }
+.nav {
+  position: fixed;
+  left: 0;
+  bottom: 1.5rem;
+  right: 0;
+  width: 85%;
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  background-color: var(--tertiary-color);
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_link {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  color: var(--color-light);
+  transition: background-color .2s ease-in-out;
+}
+
+.nav_link:hover {
+  background-color: #6d6d6d;
+}
+
+.profil_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem 0 0;
+}
+
+.skill-wrapper,
+.contact-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.logo {
+  width: 3rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 300px;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  background-color: var(--secondary-color);
+}
+
+.profil {
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+}
+
+.h1_wrapper {
+  position: absolute;
+  bottom: 2.2%;
+  width: 95%;
+  height: auto;
+  padding: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 2rem;
+  color: var(--color-medium);
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, .05);
+  backdrop-filter: blur(10px);
+}
+
+.h1_wrapper h1 {
+  color: var(--color-medium);
+  text-align: left;
+  font-weight: 400;
+}
